@@ -10,7 +10,7 @@ public class MovementModule : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
 
-    public Vector2 GetMovement => movement.normalized;
+    public Vector2 Movement => movement.normalized;
 
     private void Awake()
     {

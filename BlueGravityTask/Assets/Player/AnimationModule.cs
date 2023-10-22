@@ -22,7 +22,7 @@ public class AnimationModule : MonoBehaviour
 
     private void Update()
     {
-        Vector2 currentMovement = movementModule.GetMovement;
+        Vector2 currentMovement = movementModule.Movement;
         animator.SetFloat(speedParameter, currentMovement.magnitude);
         animator.SetFloat(xMovementParameter, currentMovement.x);
         animator.SetFloat(yMovementParameter, currentMovement.y);
