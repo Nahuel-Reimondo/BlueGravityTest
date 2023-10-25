@@ -20,9 +20,6 @@ public class PlayerInteractionModule : MonoBehaviour
     private void Update()
     {
         UpdateInteractionSensor(movementModule.Movement);
-
-        if (Input.GetKeyDown(KeyCode.E))
-            TryInteraction();
     }
 
     private void UpdateInteractionSensor(Vector2 moveDirection)
@@ -33,7 +30,7 @@ public class PlayerInteractionModule : MonoBehaviour
         interactionSensorObj.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
-    private void TryInteraction()
+    public void TryInteraction()
     {
         if (interactablesInRange.Count == 0) return;
 
