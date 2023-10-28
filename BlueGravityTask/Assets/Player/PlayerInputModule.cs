@@ -11,14 +11,23 @@ public class PlayerInputModule : MonoBehaviour
     private MovementModule movementModule;
     private PlayerInteractionModule interactionModule;
 
+    private bool inputsActivated = true;
+
     private void Awake()
     {
         movementModule = this.GetComponent<MovementModule>();
         interactionModule = this.GetComponent<PlayerInteractionModule>();
     }
 
+    private void Start()
+    {
+        GameManager.instance.OnToogleStore += HandleStore;
+    }
+
     private void Update()
     {
+        if (!inputsActivated) return;
+
         movementModule.Move(movement);
     }
 
@@ -37,5 +46,15 @@ public class PlayerInputModule : MonoBehaviour
     public void OnInteract()
     {
         interactionModule.TryInteraction();
+    }
+
+    private void HandleStore(bool open)
+    {
+        ToggleInputs(!open);
+    }
+
+    public void ToggleInputs(bool activate)
+    {
+        inputsActivated = activate;
     }
 }
