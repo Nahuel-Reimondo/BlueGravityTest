@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ShopManager : MonoBehaviour
 {
-    [SerializeField] private StoreFrameUI storeUI;
+    [SerializeField] private StoreFramePresenter storeUI;
     private Action<bool> OnStoreToogle;
 
     public static ShopManager instance;
@@ -32,7 +32,9 @@ public class ShopManager : MonoBehaviour
     public void DisplayStore(StoreData data)
     {
         OnStoreToogle?.Invoke(true);
+        storeUI.GoWith(data);
         storeUI.gameObject.SetActive(true);
+
     }
 
     public void CloseStore()

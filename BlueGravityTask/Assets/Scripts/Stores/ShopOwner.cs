@@ -43,7 +43,7 @@ public class ShopOwner : MonoBehaviour
 }
 
 [System.Serializable]
-public class StoreData
+public class StoreData : StoreFrameModel
 {
 
 }
