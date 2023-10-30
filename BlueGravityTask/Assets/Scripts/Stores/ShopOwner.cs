@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ShopOwner : MonoBehaviour
 {
-    [SerializeField] private StoreData storeData;
+    [SerializeField] private StoreInfo storeInfo;
     [SerializeField] private InteractableHandler interactableHandler;
 
     private bool isBeingExaminated = false;
@@ -29,21 +29,23 @@ public class ShopOwner : MonoBehaviour
     private void HandleInteraction()
     {
         Debug.Log("Player interacted with: " + this.gameObject.name);
-        StartExaminStore();
+        ShowStore();
     }
 
-    private void StartExaminStore()
+    private void ShowStore()
     {
         if (isBeingExaminated) return;
 
         isBeingExaminated = true;
-        ShopManager.instance.DisplayStore(storeData);
+        ShopManager.instance.DisplayStore(storeInfo);
     }
   
 }
 
 [System.Serializable]
-public class StoreData : StoreFrameModel
+public class StoreInfo
 {
+    [SerializeField] private StoreData storeData;
 
+    public StoreData StoreData => storeData;
 }

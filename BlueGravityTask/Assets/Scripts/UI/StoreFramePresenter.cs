@@ -25,6 +25,7 @@ public class StoreFramePresenter : BasePresenter<StoreFrameModel, StoreFrameView
     public override void GoWith(StoreFrameModel model)
     {
         Debug.Log("Set up Model");
+        this.model = model;
     }
 
     private void OnDisable()

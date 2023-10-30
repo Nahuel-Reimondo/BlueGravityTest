@@ -29,12 +29,11 @@ public class ShopManager : MonoBehaviour
         OnStoreToogle += GameManager.instance.HandleStoreToogle;
     }
 
-    public void DisplayStore(StoreData data)
+    public void DisplayStore(StoreInfo storeInfo)
     {
         OnStoreToogle?.Invoke(true);
-        storeUI.GoWith(data);
+        storeUI.GoWith(new StoreFrameModel(storeInfo));
         storeUI.gameObject.SetActive(true);
-
     }
 
     public void CloseStore()

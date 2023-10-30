@@ -262,7 +262,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3414945880019038801, guid: 53b28588e66274341a45e68b35d2df8d, type: 3}
   m_PrefabInstance: {fileID: 3414945880419869673}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3414945880419869675}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e4b20c769cfa224496b7d81ad3e2ee8, type: 3}
@@ -9694,35 +9694,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53b28588e66274341a45e68b35d2df8d, type: 3}
---- !u!114 &3414945880419869674 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3414945879605842657, guid: 53b28588e66274341a45e68b35d2df8d, type: 3}
-  m_PrefabInstance: {fileID: 3414945880419869673}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &3414945880419869675 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3414945880019038815, guid: 53b28588e66274341a45e68b35d2df8d, type: 3}
-  m_PrefabInstance: {fileID: 3414945880419869673}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3414945880419869676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3414945880419869675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11e20330ad25d354bb4d8e7c783246d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  closeButton: {fileID: 3414945880419869674}
 --- !u!1001 &5208234227111229231
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9831,6 +9802,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8573155752077188571, guid: f5de9f5a656d519468fca0d36d125c57, type: 3}
+      propertyPath: storeInfo.storeData
+      value: 
+      objectReference: {fileID: 11400000, guid: 9e944a6c72d07fa47983a019385834b8, type: 2}
     - target: {fileID: 8573155752077188575, guid: f5de9f5a656d519468fca0d36d125c57, type: 3}
       propertyPath: m_Name
       value: ShopOwner
