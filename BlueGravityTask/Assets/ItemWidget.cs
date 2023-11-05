@@ -7,6 +7,7 @@ public class ItemWidget : MonoBehaviour
 {
     [SerializeField] private TMP_Text nameText;
     [SerializeField] private Toggle selectedToggle;
+    [SerializeField] private RawImage itemIcon;
 
     private ItemData itemData;
     private Action<ItemData> OnChangeSelection;
@@ -15,6 +16,7 @@ public class ItemWidget : MonoBehaviour
     {
         itemData = data;
         nameText.text = itemData.ItemName;
+        itemIcon.texture = itemData.Image;
         selectedToggle.onValueChanged.AddListener(HandleSelection);
 
         OnChangeSelection += callback;

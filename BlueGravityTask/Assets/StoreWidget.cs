@@ -8,7 +8,7 @@ public class StoreWidget : MonoBehaviour
 {
     [SerializeField] private List<ItemData> itemsToDisplay = new List<ItemData>();
     [SerializeField] private ScrollRect viewRect;
-    [SerializeField] private GameObject itemWidget;
+    [SerializeField] private ItemWidget itemWidget;
 
     public void SetUp(List<ItemData> items)
     {
@@ -20,8 +20,17 @@ public class StoreWidget : MonoBehaviour
     {
         foreach (ItemData item in itemsToDisplay)
         {
-            GameObject go= Instantiate(itemWidget, viewRect.content.transform);
-            //go.SetUp();
+            ItemWidget widget = Instantiate(itemWidget, viewRect.content.transform);
+            widget.SetUp(item,HandleItemSelection);
         }
     }
+
+    private void HandleItemSelection(ItemData data)
+    {
+        //Update UI
+        //StoreService o algo por el estilo
+        print("Selected -> " + data.ItemName);
+    }
+
+
 }

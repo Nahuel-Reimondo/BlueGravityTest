@@ -15,10 +15,13 @@ public class StoreFramePresenter : BasePresenter<StoreFrameModel, StoreFrameView
     {
         Bind();
     }
+
     protected override void Bind()
     {
         base.Bind();
-        view.SetUp();
+        StoreData currentStoreData = model.storeInfo.StoreData;
+        StoreData playerInventory = model.storeInfo.StoreData; //Insert Playerinventory
+        view.SetUp(currentStoreData, playerInventory);
         view.OnCloseButton += Close;
     }
 

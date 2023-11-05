@@ -129,6 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f13aaffb631380e439138760f1cde06f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  storeInfo:
+    storeData: {fileID: 11400000, guid: 9e944a6c72d07fa47983a019385834b8, type: 2}
   interactableHandler: {fileID: 8573155750988403087}
 --- !u!1 &8573155752171431087
 GameObject:

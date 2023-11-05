@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cce6adf2071863b4687eacf515d8147f, type: 3}
-  m_Name: CabinStore
+  m_Script: {fileID: 11500000, guid: 89326b8920d2a07439954040a4971e5f, type: 3}
+  m_Name: Blue
   m_EditorClassIdentifier: 
-  name: CabinStore
-  items:
-  - {fileID: 11400000, guid: 78dee6c7dc505804e88b4bb9ad2eb6e0, type: 2}
-  - {fileID: 11400000, guid: ee7f981686a216b4abdfa5ac1405cba9, type: 2}
+  name: Blue
+  image: {fileID: 2800000, guid: b3d852d4114dd47c8929406865ac0c1e, type: 3}
+  sellPrice: 10
+  buyPrice: 15

@@ -9,18 +9,21 @@ public class StoreFrameView : BaseView
     [SerializeField] private Button closeButton;
     [Header("Sell")]
     [SerializeField] private Button sellTabButton;
-    [SerializeField] private GameObject sellTab;
+    [SerializeField] private StoreWidget sellTab;
     [Header("Buy")]
     [SerializeField] private Button buyTabButton;
-    [SerializeField] private GameObject buyTab;
+    [SerializeField] private StoreWidget buyTab;
 
     public Action OnCloseButton;
 
-    public void SetUp()
+    public void SetUp(StoreData storeData, StoreData playerInventory)
     {
         closeButton.onClick.AddListener(HandleCloseButton);
         sellTabButton.onClick.AddListener(HandleSellTab);
         buyTabButton.onClick.AddListener(HandleBuyTab);
+
+        sellTab.SetUp(playerInventory.Items);
+        buyTab.SetUp(storeData.Items);
     }
 
     private void HandleCloseButton()
@@ -30,14 +33,14 @@ public class StoreFrameView : BaseView
 
     private void HandleSellTab()
     {
-        sellTab.SetActive(true);
-        buyTab.SetActive(false);
+        sellTab.gameObject.SetActive(true);
+        buyTab.gameObject.SetActive(false);
     }
 
     private void HandleBuyTab()
     {
-        sellTab.SetActive(false);
-        buyTab.SetActive(true);
+        sellTab.gameObject.SetActive(false);
+        buyTab.gameObject.SetActive(true);
     }
 
 }

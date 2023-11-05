@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StoreFrameModel : BaseModel
 {
-    private readonly StoreInfo storeInfo;
+    public readonly StoreInfo storeInfo;
 
     public StoreFrameModel (StoreInfo info)
     {
